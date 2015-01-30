@@ -181,7 +181,7 @@ form h3 {
 	box-shadow: 2px 2px 4px 0px #000000;}
 
 h1 {
-   font-size: 64px;
+   font-size: 40px;
    background-color: #701713;
    margin-bottom: 5px;
    text-align: center;
@@ -189,14 +189,14 @@ h1 {
 }
 
 h2 {
-   font-size: 40px;
+   font-size: 32px;
    clear: both;
    text-align: center;
 	text-shadow: 2px 2px 4px #000000;
 }
 
 h3 {
-   font-size: 30px;
+   font-size: 24px;
    text-align: center;
    padding-bottom: 1em;
 	text-shadow: 2px 2px 4px #000000;
