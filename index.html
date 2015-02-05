@@ -9,23 +9,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='http://fonts.googleapis.com/css?family=Bilbo+Swash+Caps%20Nobile%7cUnifrakturMaguntia' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 
 
 <!--BODY-->
 <body class="cf">
 <div id="wrapper">
-<header> <a id="top" class="form">Three Days Grace</a></header>
+<header> <h1><a id="top" class="form">Three Days Grace</a></h1>
 	<nav>
-	<ul class="ul">
-		<li class="li"><a href="#members" class="a"> Members</a></li>
-		<li class="li"><a href="#album" class="a">Albums</a></li>
-		<li class="li"><a href="#yellow" class="a">Subscribe</a></li>
-	</ul>
+		<ul class="main-navigation">
+			<li class="li"><a href="#members" class="a"> Members</a></li>
+			<li class="li"><a href="#album" class="a">Albums</a></li>
+			<li class="li"><a href="#yellow" class="a">Subscribe</a></li>
+		</ul>
 	</nav>
-		<p class="image">
+</header>
+	<p class="image">
 		<img src="images/members.jpg" alt="Band Members" class="imgrt">
-		</p>
+	</p>
 
 
 <!--ARTICLE-->
@@ -80,10 +82,10 @@
 <aside>
 	<form><a href="#top" id="yellow">
 		<h3>Subscribe</h3></a>
-		<p>First Name:<input type="text" placeholder="First"/></p>
-		<p>Last Name:<input type="text" placeholder="Last"/></p>
-		<p>Address:<input type="text"/></p>
-		<p>City:<input type="text"/></p>
+		<p><span>First Name: </span><input type="text" placeholder="First"/></p>
+		<p><span>Last Name: </span><input type="text" placeholder="Last"/></p>
+		<p><span>Address: </span><input type="text"/></p>
+		<p><span>City: </span><input type="text"/></p>
 		<select>
 			<option value="" disabled selected>--State--</option>
 			<option value="Alabama">AL</option>
@@ -137,11 +139,11 @@
 			<option value="Wisconsin">WI</option>
 			<option value="Wyoming">WY</option>
 		</select>
-		<p>Date of Birth:<input type="date"/><p>
-		<p>Email:<input type="email"/><p>
+		<p><span>Date of Birth: </span><input type="date"/><p>
+		<p><span>Email: </span><input type="email"/><p>
 		<p>Do you agree to terms an conditions?
-		Yes<input type="checkbox" value="Yes"/>No<input type="checkbox" value="No"/></p>	
-		<p>Comments<textarea></textarea></p>
+		Yes <input type="checkbox" value="Yes"/> No <input type="checkbox" value="No"/></p>
+		<p>Comments <textarea></textarea></p>
 		<p><input type="submit" value="SUBMIT"/></p>
 	</form>
 </aside>

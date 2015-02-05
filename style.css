@@ -1,216 +1,938 @@
 /* Christopher Clear
 
-Color Palette
+this css file is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 
-#ab3535  -  Red
-#757272  -  Grey
-#dcda21  -  Pale Yellow
-#000  -  Black
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+
+Color Palette
 */
 
-/*-----Reset----*/
-html,body,article,section,h1,h2,h3,footer,aside{
-	margin: 0;
-	padding: 0;
-	display: block;
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Reset
+2.0 Typography
+3.0 Elements
+4.0 Forms
+5.0 Navigation
+	5.1 Links
+	5.2 Menus
+6.0 Accessibility
+7.0 Alignments
+8.0 Clearings
+9.0 Header
+10.0 Footer
+11.0 Wrapper
+12.0 Responsive
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Reset
+--------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+   border: 0;
+   font-family: inherit;
+   font-size: 100%;
+   font-style: inherit;
+   font-weight: inherit;
+   margin: 0;
+   outline: 0;
+   padding: 0;
+   vertical-align: baseline;
 }
 
-html{
-	background-color: #000;
+html {
+   font-size: 62.5%;
+   /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */ overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
+   -webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+   -ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+   box-sizing: border-box; /* Apply a natural box layout model to the document; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 }
 
-header{
-	width:100%;
-	background-color: #ab3535;
-	text-align: center;
-	font-size: 2.28em;
-	margin-bottom: 4px;
+*,
+*:before,
+*:after {
+   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+   box-sizing: inherit;
 }
-/*------Body-----*/
-.cf:after{
-	content: "";
-	display: block;
-	clear: both;
+
+body {
+   color: #404040;
+   color: hsl(0, 0%, 25%);
+   background-image: url( images/seamless-natural-grunge-textures-2.jpg );
+   font-size: 16px;
+   font-size: 1.6rem;
+   font-family: 'Times New Roman', serif;
+   line-height: 1.5;
 }
-header, h1, h2, h3{
-	font-family: 'UnifrakturMaguntia', cursive, helvetica, sans-serif;
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+   display: block;
+}
+
+ol,
+ul {
+   list-style: none;
+}
+
+table {
+   /* tables still need 'cellspacing="0"' in the markup */
+   border-collapse: separate;
+   border-spacing: 0;
+}
+
+caption,
+th,
+td {
+   font-weight: normal;
+   text-align: left;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+   content: "";
+}
+
+blockquote,
+q {
+   quotes: "" "";
+}
+
+a:focus {
+   outline: thin dotted;
+}
+
+a:hover,
+a:active {
+   outline: 0;
+}
+
+a img {
+   border: 0;
+}
+
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+   color: #fff;
+   font-family: 'Times New Roman', serif;
+   font-size: 18px;
+   font-size: 1.8rem;
+   line-height: 1.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   clear: both;
+   color: #e5e1d9;
+   font-family: 'after_shokregular', sans-serif;
+   text-shadow: 2px 2px 5px #000;
+   /*-ms-word-break: break-word;*/
+   /*word-break: break-word;*/
+}
+
+h1 {
+   font-size: 40px;
+   font-size: 4.0rem;
+}
+
+h2 {
+   font-size: 32px;
+   font-size: 3.2rem;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+h3 {
+   font-size: 24px;
+   font-size: 2.4rem;
+}
+
+h4 {
+   font-size: 22px;
+   font-size: 2.2rem;
+}
+
+h5 {
+   font-size: 20px;
+   font-size: 2.0rem;
+}
+
+h6 {
+   font-size: 18px;
+   font-size: 1.8rem;
+}
+
+p {
+   margin-bottom: 1.5em;
+}
+
+b,
+strong {
+   font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+   font-style: italic;
+}
+
+blockquote {
+   margin: 0 1.5em;
+}
+
+address {
+   margin: 0 0 1.5em;
+}
+
+pre {
+   background: #eee;
+   font-family: "Courier 10 Pitch", Courier, monospace;
+   font-size: 15px;
+   font-size: 1.5rem;
+   line-height: 1.6;
+   margin-bottom: 1.6em;
+   max-width: 100%;
+   overflow: auto;
+   padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+   font-size: 15px;
+   font-size: 1.5rem;
+}
+
+abbr,
+acronym {
+   border-bottom: 1px dotted #666;
+   cursor: help;
+}
+
+mark,
+ins {
+   background: #fff9c0;
+   text-decoration: none;
+}
+
+sup,
+sub {
+   font-size: 75%;
+   height: 0;
+   line-height: 0;
+   position: relative;
+   vertical-align: baseline;
+}
+
+sup {
+   bottom: 1ex;
+}
+
+sub {
+   top: .5ex;
+}
+
+small {
+   font-size: 75%;
+}
+
+big {
+   font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+hr {
+   background-color: #ccc;
+   border: 0;
+   height: 1px;
+   margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+   margin: 0 0 1.5em 3em;
+}
+
+ul {
+   list-style: disc;
+}
+
+ol {
+   list-style: decimal;
+}
+
+li > ul,
+li > ol {
+   margin-bottom: 0;
+   margin-left: 1.5em;
+}
+
+dt {
+   font-weight: bold;
+}
+
+dd {
+   margin: 0 1.5em 1.5em;
+}
+
+img {
+   height: auto; /* Make sure images are scaled correctly. */
+   max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+   margin: 0;
+}
+
+table {
+   margin: 0 0 1.5em;
+   width: 100%;
+}
+
+th {
+   font-weight: bold;
+}
+
+/*--------------------------------------------------------------
+4.0 Forms
+--------------------------------------------------------------*/
+button,
+input,
+select,
+textarea {
+   font-size: 100%; /* Corrects font size not being inherited in all browsers */
+   margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+   vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+   box-shadow: 2px 2px 5px #000;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+   background: #b50801;
+   border: 1px solid #000;
+   border-radius: 5px;
+   box-shadow: 2px 2px 5px #000;
+   text-shadow: 2px 2px 5px #000;
+   color: hsl(0, 0%, 100%);
+   cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+   font-size: 16px;
+   font-size: 1.6rem;
+   font-family: 'after_shokregular';
+   line-height: 1;
+   padding: 1em 2em;
+   text-transform: uppercase;
+   -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 
 }
-h2,h3{
-	margin-bottom: 1em;
-	margin-top: .5em;
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+   background: #000;
+   background: hsl(0, 0%, 0%);
 }
-p{
-	font-family: 'nobile', sans-serif;
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+   background: #000;
+   background: hsl(0, 0%, 0%);
 }
-body{
-	width: 90%;
-	height: 100%;
-	background-color: #757272;
-	float: left;
-	margin-left: 5%;
+
+input[type="checkbox"],
+input[type="radio"] {
+   padding: 0; /* Addresses excess padding in IE8/9 */
 }
+
+input[type="search"] {
+   box-sizing: content-box;
+   -webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+}
+
+input[type="search"]::-webkit-search-decoration {
+   /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+   -webkit-appearance: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+   color: #666;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+   color: #111;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+   padding: 3px;
+}
+
+textarea {
+   overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+   padding-left: 3px;
+   vertical-align: top; /* Improves readability and alignment in all browsers */
+   width: 100%;
+}
+
+form p span {
+   width: 250px;
+}
+
+/*--------------------------------------------------------------
+5.0 Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+5.1 Links
+--------------------------------------------------------------*/
+a {
+   color: #e5e1d9;
+   text-decoration: none;
+}
+
+a:visited {
+   color: #e5e1d9;
+}
+
+a:hover,
+a:focus {
+   text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
+
+nav {
+   float: right;
+}
+
+.main-navigation {
+   clear: both;
+   display: block;
+   float: left;
+   font-family: 'Times New Roman', sans-serif;
+   margin: 0;
+   position: relative;
+   text-transform: uppercase;
+   width: 100%;
+}
+
+.main-navigation ul {
+   list-style: none;
+   margin: 0;
+   padding-left: 0;
+}
+
+.main-navigation li {
+   float: left;
+   list-style-type: none;
+   position: relative;
+}
+
+.main-navigation .main-menu li:first-child {
+   padding-left: 200px;
+}
+
+.main-navigation a {
+   color: #fff;
+   color: hsl(0, 0%, 100%);
+   display: block;
+   font-size: 16px;
+   font-size: 1.6rem;
+   line-height: 2.2em;
+   padding: 0.75em 1em;
+   text-decoration: none;
+}
+
+.main-navigation ul ul {
+   background: #4d4d4d;
+   background: hsl(0, 0%, 30%);
+   display: none;
+   float: left;
+   left: 0;
+   padding: 0;
+   position: absolute;
+   z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+   left: 100%;
+   top: 0;
+}
+
+.main-navigation ul ul a {
+   width: 200px;
+}
+
+.main-navigation ul ul li {
+
+}
+
+.main-navigation li:hover > a {
+   color: #fff;
+   color: hsl(0, 0%, 100%);
+   background: #b50801;
+}
+
+.main-navigation ul ul :hover > a {
+}
+
+.main-navigation ul ul a:hover {
+   background: #313131;
+   background: hsl(0, 0%, 19%);
+}
+
+.main-navigation ul li:hover > ul {
+   display: block;
+}
+
+.main-navigation ul ul li:hover > ul {
+   left: 100%;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_item > a:hover,
+.main-navigation .current-menu-item > a:hover {
+   background: #fff;
+   color: #313131;
+   color: hsl(0, 0%, 19%);
+}
+
+.main-navigation .current_page_ancestor {
+   background: #4d4d4d;
+   background: hsl(0, 0%, 30%);
+}
+
+.main-navigation ul ul .current_page_parent,
+.main-navigation .current_page_parent .current_page_item > a {
+   color: #fff;
+   color: hsl(0, 0%, 100%);
+   background: #313131;
+   background: hsl(0, 0%, 19%);
+}
+
+.main-navigation ul.social-menu {
+   float: right;
+}
+
+/* Small menu */
+.menu-toggle {
+   display: none;
+}
+
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation {
+   margin: 0 0 1.5em;
+   overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous,
+.post-navigation .nav-previous {
+   float: left;
+   width: 50%;
+}
+
+.comment-navigation .nav-next,
+.paging-navigation .nav-next,
+.post-navigation .nav-next {
+   float: right;
+   text-align: right;
+   width: 50%;
+}
+
+/* Social Menu */
+
+.menu-social ul {
+   float: right;
+   text-align: center;
+   list-style: none;
+}
+
+.menu-social ul li {
+   position: relative;
+   display: inline-block;
+}
+
+.menu-social li a:before {
+   display: inline-block;
+   padding: 0 5px;
+   vertical-align: top;
+   font-family: 'Fontawesome';
+   font-size: 20px;
+   color: #fff;
+   -webkit-font-smoothing: antialiased;
+   content: '\f0c0';
+}
+
+.menu-social li a[href*="facebook.com"]::before {
+   content: '\f09a';
+}
+
+.menu-social li a[href*="twitter.com"]::before {
+   content: '\f099';
+}
+
+.menu-social li a[href*="dribbble.com"]::before {
+   content: '\f17d';
+}
+
+.menu-social li a[href*="plus.google.com"]::before {
+   content: '\f0d5';
+}
+
+.menu-social li a[href*="pinterest.com"]::before {
+   content: '\f0d2';
+}
+
+.menu-social li a[href*="github.com"]::before {
+   content: '\f09b';
+}
+
+.menu-social li a[href*="tumblr.com"]::before {
+   content: '\f173';
+}
+
+.menu-social li a[href*="youtube.com"]::before {
+   content: '\f167';
+}
+
+.menu-social li a[href*="flickr.com"]::before {
+   content: '\f16e';
+}
+
+.menu-social li a[href*="vimeo.com"]::before {
+   content: '\f194';
+}
+
+.menu-social li a[href*="instagram.com"]::before {
+   content: '\f16d';
+}
+
+.menu-social li a[href*="linkedin.com"]::before {
+   content: '\f0e1';
+}
+
+
+
+/*--------------------------------------------------------------
+6.0 Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+   clip: rect(1px, 1px, 1px, 1px);
+   height: 1px;
+   overflow: hidden;
+   position: absolute !important;
+   width: 1px;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+   background-color: #f1f1f1;
+   border-radius: 3px;
+   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+   clip: auto !important;
+   color: #21759b;
+   display: block;
+   font-size: 14px;
+   font-size: 1.4rem;
+   font-weight: bold;
+   height: auto;
+   left: 5px;
+   line-height: normal;
+   padding: 15px 23px 14px;
+   text-decoration: none;
+   top: 5px;
+   width: auto;
+   z-index: 100000; /* Above WP toolbar */
+}
+
+/*--------------------------------------------------------------
+7.0 Alignments
+--------------------------------------------------------------*/
+.alignleft {
+   display: inline;
+   float: left;
+   margin-right: 1.5em;
+}
+
+.alignright {
+   display: inline;
+   float: right;
+   margin-left: 1.5em;
+}
+
+.aligncenter {
+   clear: both;
+   display: block;
+   margin: 0 auto;
+}
+
+.textcenter {
+   text-align: center;
+}
+
+.column-left {
+   float: left;
+   width: 48%;
+}
+
+.column-right {
+   float: right;
+   width: 48%;
+}
+
+.span-right {
+   float: right;
+}
+
+.menu-page {
+   overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+8.0 Clearings
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+9.0 Header
+--------------------------------------------------------------*/
+header {
+   float: left;
+   background-color: #701713;
+   margin: 0 0 20px 0;
+   width: 100%;
+}
+
+header h1 {
+   float: left;
+}
+
+/*--------------------------------------------------------------
+10.0 Footer
+--------------------------------------------------------------*/
+.footer {
+
+}
+
+.footer a {
+
+}
+
+.copyright {
+}
+
+.built-by {
+}
+
+/*--------------------------------------------------------------
+11.0 Wrapper
+--------------------------------------------------------------*/
 
 #wrapper {
-	max-width: 1140px;
-	margin: 0 auto;
-}
-section{
-
-	clear: both;
-	width: 100%;
-}
-article{
-	width: 97%;
-	margin: 1%;
-}
-h1{
-		background-color: #ab3535;
-		margin-bottom: 5px;
-}
-nav{
-	width:293px;
-	min-width: 100px;
-	margin: auto;
-}
-
-.ul{
-	background-color:#757272;
-	margin: 4px auto;
-	overflow: hidden;
-	width:80%;
-	min-width: 300px;
-	max-width: 400px;
-	padding: 0px;
-
-}
- .li{
-	list-style-type: none;
-	background-color: black;
-	width: 90px;
-	float: left;
-	margin: 0px 4px;
-
-}
-.a{
-	display: block;
-	width: 100%;
-	min-width: 40px;
-	height: 30px;
-	text-align: center;
-	line-height: 30px;
-	text-decoration: none;
-	float: left;
-	color: #dcda21;
-}
-li{
-	list-style-type: none;
-	line-height: 45px;
-	text-align: center;
-}
-ul{
-	padding: 0}
-/*-------IMAGES-----*/
-.tweet{
-	text-decoration: none;
-}
-.bio{
-	margin-bottom: 130px;
-}
-.photo{
-	width: 170px;
-	height: 170px;
-	float: left;
-	clear: left;
-	margin-bottom: .5em;
-	margin-right: .5em;	
-	display:inline-block;
-}
-
-.form{
-	color: black;
-}
-form h3 {
-	border-bottom: 2px black solid;
-	margin: auto;
-	width: 17%;
-	padding-bottom: 0;
-}
- .imgrt{
- width: 80%;
- display: block;
- margin: 0 auto;
- 
- }
-#album, #members{
-	 border-bottom: 2px solid red;
-}
-
- .album{
- 	width: 90%;
- 	margin: 0 auto;
- 	min-width: 200px;
- 	max-width: 350px;
- 	margin-bottom: 10px;
- }
- h1{
- 	text-align: center;
- }
-
- h2{
- 	clear: both;
- 	text-align: center;
- }
- h3{
- 	text-align: center;
- 	padding-bottom: 1em;
- }
-
-a{
-	text-decoration: none;
-	color: black;
-}
-table{
-	width: 90%;
-	margin-right: 5%;
-	margin-left: 5%;
-	border-collapse: collapse;
-}
-td{
-	padding: 0px;
-	margin: 0px;
-}
-.red{
-	background-color: #ab3535;
-}
-/*------FORM------*/
-aside{
-	text-align: center
-}
-form{
-	background-color: #ab3535;
-	margin:0 auto;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	box-shadow: 5px 5px 5px 1px rgba(0,0,0,.7);
-	max-width: 490px;
-}
-form p {
-	text-align: justify;
-	padding-left: 10px;
+   max-width: 1140px;
+   margin: 0 auto;
 }
 
 
-/*--------FOOTER------*/
-footer{
-	clear: both;
-	float: right;
-	margin-right: 5%;
-	padding-bottom: 8px;
+
+
+/*--------------------------------------------------------------
+12.0 Classes
+--------------------------------------------------------------*/
+
+.stripe {
+   background: #e1e9de;
+   padding: .3em .5em;
+   margin: 0;
 }
 
-footer img{
-	position: relative;
-	top: 20px;
-	max-width: 60px;
+.non-stripe {
+   padding: .3em .5em;
+   margin: 0;
 }
+
+.img-border {
+   border: 1px solid #999;
+}
+
+ul.zebra-stripe {
+   list-style: none;
+   margin: 0 0 20px;
+}
+
+ul.zebra-stripe li {
+   padding: .3em .5em;
+   margin: 0;
+}
+
+ul.zebra-stripe li:nth-child(odd) {
+   background: #e1e9de;
+}
+
+.google-maps {
+   position: relative;
+   padding-bottom: 75%;
+   /*// This is the aspect ratio height : 0;*/
+   overflow: hidden;
+}
+
+.google-maps iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100% !important;
+   height: 100% !important;
+}
+
+.imgrt {
+   margin: 0 auto;
+   display: block;
+   max-width: 80%;
+}
+
+p.image img {
+   box-shadow: 2px 2px 5px #000;
+}
+
+.album {
+   box-shadow: 2px 2px 5px #000;
+}
+p.bio {
+   float: left;
+   display: inline;
+   /*background-color: yellow;*/
+}
+.photo {
+   box-shadow: 2px 2px 5px #000;
+   float: left;
+   margin: 0 20px 0 0;
+}
+
+.a {
+   text-shadow: 2px 2px 5px #000;
+}
+
+/*--------------------------------------------------------------
+13.0 Fonts
+--------------------------------------------------------------*/
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on February 1, 2015 */
+@font-face {
+   font-family: 'after_shokregular';
+   src: url('fonts/after_shok-webfont.eot');
+   src: url('fonts/after_shok-webfont.eot?#iefix') format('embedded-opentype'),
+   url('fonts/after_shok-webfont.woff2') format('woff2'),
+   url('fonts/after_shok-webfont.woff') format('woff'),
+   url('fonts/after_shok-webfont.ttf') format('truetype'),
+   url('fonts/after_shok-webfont.svg#after_shokregular') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+
+/*--------------------------------------------------------------
+13.0 Responsive
+--------------------------------------------------------------*/
+@media only screen and (max-width: 1280px) {
+
+}
+
+@media only screen and (max-width: 1140px) {
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media screen and ( max-width: 1023px ) {
+
+}
+
+@media only screen and ( max-width: 768px ) {
+
+}
+
+@media screen and (max-width: 600px) {
+
+}
+@media screen and ( max-width: 585px ) {
+
+}
+
+@media only screen and ( max-width: 480px ) {
+
+}
+
+@media only screen and ( max-width: 470px ) {
+
+}
+
+@media only screen and ( max-width: 340px ) {
+
+}
+
