@@ -7,11 +7,41 @@
 	<meta name="description" content="Three Days Grace Discography">
 	<meta name="author" content="Christopher Clear">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href='http://fonts.googleapis.com/css?family=Bilbo+Swash+Caps%20Nobile%7cUnifrakturMaguntia' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="application/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script>
+		jQuery(function() {
 
+			$(function(){
+				$('#fig1p').hide();
+				$('#fig2p').hide();
+				$('#fig3p').hide();
+				$('#fig4p').hide();
+				$('#fig5p').hide();
+			});
+
+			$("#fig1").click(function() {
+				$("#fig1p").toggle(750);
+			});
+
+			$("#fig2").click(function() {
+				$("#fig2p").toggle(750);
+			});
+
+			$("#fig3").click(function() {
+				$("#fig3p").toggle(750);
+			});
+
+			$("#fig4").click(function() {
+				$("#fig4p").toggle(750);
+			});
+
+			$("#fig5").click(function() {
+				$("#fig5p").toggle(750);
+			});
+		});
+	</script>
 </head>
-
 
 <!--BODY-->
 <body class="cf">
@@ -40,26 +70,53 @@
 
 	<section class="table">
 		<h2><a id="members" href="#top">The Members</a></h2>
-		<p class="bio">
-			<img src="images/matt.jpg" alt="Matt Walst" class="photo">
-		Matt Walst, the younger brother to the band's bass guitarist, Brad Walst, joined the band as the lead vocalist when Adam Gontier left for health related reasons. Matt was born December 18, 1982 making his age 31 and the youngest member. He got his first start when he founded the band <em>"My Darkest Days"</em> as the lead vocalist.
-		</p>
-		<p class="bio">
-			<img src="images/brad.jpg" alt="Brad Walst" class="photo">
-		Brad Walst the older brother to Matt Walst is the bass guitarist and was with the band when it was first created back in 1997. Brad was born on February 16, 1977 putting his age at 37. Brad is married to Rhonda Walst and has two children, James and Grayden Walst.	
-		</p>
-		<p class="bio">
-			<img src="images/barry.jpg" alt="Barry Stock" class="photo">
-		Barry Stock joined the band in 2003 five years after Three Days Grace was orginally formed by Brad Walst, Neil Sanderson, and Adam Gontier. Barry was born on April 24, 1974 making him the odest member of the band at 40 years old. He is the band's lead guitarist and is married to Heather Stock.
-		</p>
-		<p class="bio">
-			<img src="images/neil.jpg" alt="Neil Sanderson" class="photo">
-		Neil Sandersonis the band's drummer and backing vocalist. Neil's first band he played for was the Christian rock band <em>"Thousand Foot Krutch"</em> from 1995-1997 when he then co-founded Three Days Grace. Born on December 17, 1978 he is now 35 years old and is married to Janin Sanderson.
-		</p>
-		<p class="bio">
-			<img src="images/adam.jpg" alt="Adam Gontier" class="photo">
-		Adam Gontier was the co-founder and lead vocalist for Three Days Grace until 2013 when he left the band for health issues and was replaced by Matt Walst. Adam was born on May 25, 1978 and is married to Naomi Faith Brewer. Adam also play in a film called <em>"Raise Your Voice"</em> along with band members Brad, Barry, and Neil.
-		</p>
+
+		<div class="bio">
+			<figure id="fig1">
+				<img src="images/matt.jpg" alt="Matt Walst" class="photo">
+				<figcaption>Matt Walst</figcaption>
+			</figure>
+			<p id="fig1p">
+				Matt Walst, the younger brother to the band's bass guitarist, Brad Walst, joined the band as the lead vocalist when Adam Gontier left for health related reasons. Matt was born December 18, 1982 making his age 31 and the youngest member. He got his first start when he founded the band <em>"My Darkest Days"</em> as the lead vocalist.
+			</p>
+		</div>
+		<div class="bio">
+			<figure id="fig2">
+				<img src="images/brad.jpg" alt="Brad Walst" class="photo">
+				<figcaption>Brad Walst</figcaption>
+			</figure>
+			<p id="fig2p">
+				Brad Walst the older brother to Matt Walst is the bass guitarist and was with the band when it was first created back in 1997. Brad was born on February 16, 1977 putting his age at 37. Brad is married to Rhonda Walst and has two children, James and Grayden Walst.
+			</p>
+		</div>
+
+		<div class="bio">
+			<figure id="fig3">
+				<img src="images/barry.jpg" alt="Barry Stock" class="photo">
+				<figcaption>Barry Stock</figcaption>
+			</figure>
+			<p id="fig3p">
+				Barry Stock joined the band in 2003 five years after Three Days Grace was orginally formed by Brad Walst, Neil Sanderson, and Adam Gontier. Barry was born on April 24, 1974 making him the odest member of the band at 40 years old. He is the band's lead guitarist and is married to Heather Stock.
+			</p>
+		</div>
+		<div class="bio">
+			<figure id="fig4">
+				<img src="images/neil.jpg" alt="Neil Sanderson" class="photo">
+				<figcaption>Neil Sanderson</figcaption>
+			</figure>
+			<p id="fig4p">
+				Neil Sandersonis the band's drummer and backing vocalist. Neil's first band he played for was the Christian rock band <em>"Thousand Foot Krutch"</em> from 1995-1997 when he then co-founded Three Days Grace. Born on December 17, 1978 he is now 35 years old and is married to Janin Sanderson.
+			</p>
+		</div>
+		<div class="bio">
+			<figure id="fig5">
+				<img src="images/adam.jpg" alt="Adam Gontier" class="photo">
+				<figcaption>Adam Gontier</figcaption>
+			</figure>
+			<p id="fig5p">
+				Adam Gontier was the co-founder and lead vocalist for Three Days Grace until 2013 when he left the band for health issues and was replaced by Matt Walst. Adam was born on May 25, 1978 and is married to Naomi Faith Brewer. Adam also play in a film called <em>"Raise Your Voice"</em> along with band members Brad, Barry, and Neil.
+			</p>
+		</div>
 	</section>
 	
 		<h2><a id="album" href="#top">Albums</a></h2>

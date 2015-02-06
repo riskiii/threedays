@@ -795,7 +795,7 @@ header h1 {
 --------------------------------------------------------------*/
 
 #wrapper {
-   max-width: 1140px;
+   max-width: 1280px;
    margin: 0 auto;
 }
 
@@ -863,14 +863,21 @@ p.image img {
 .album {
    box-shadow: 2px 2px 5px #000;
 }
-p.bio {
+.bio {
    float: left;
-   display: inline;
-   /*background-color: yellow;*/
+   max-width: 320px;
+}
+.bio p {
+   margin: 0 20px;
+}
+.bio img {
+   margin: 0 40px;
+}
+.bio figcaption {
+   text-align: center;
 }
 .photo {
    box-shadow: 2px 2px 5px #000;
-   float: left;
    margin: 0 20px 0 0;
 }
 
