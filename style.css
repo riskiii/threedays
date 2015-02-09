@@ -106,6 +106,7 @@ th,
 td {
    font-weight: normal;
    text-align: left;
+   padding-left: 10px;
 }
 
 blockquote:before,
@@ -175,13 +176,14 @@ h2 {
 }
 
 h3 {
-   font-size: 24px;
-   font-size: 2.4rem;
+   font-size: 22px;
+   font-size: 2.2rem;
+   text-align: center;
 }
 
 h4 {
-   font-size: 22px;
-   font-size: 2.2rem;
+   font-size: 20px;
+   font-size: 2.0rem;
 }
 
 h5 {
@@ -331,6 +333,11 @@ th {
    font-weight: bold;
 }
 
+tr:nth-child(odd) {
+   background-color: rgba(0,0,0,0.30);
+}
+
+
 /*--------------------------------------------------------------
 4.0 Forms
 --------------------------------------------------------------*/
@@ -357,7 +364,7 @@ input[type="submit"] {
    cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
    font-size: 16px;
    font-size: 1.6rem;
-   font-family: 'after_shokregular';
+   font-family: Helvetica, Arial, sans-serif;
    line-height: 1;
    padding: 1em 2em;
    text-transform: uppercase;
@@ -369,8 +376,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-   background: #000;
-   background: hsl(0, 0%, 0%);
+   background: #701713;
 }
 
 button:focus,
@@ -381,8 +387,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-   background: #000;
-   background: hsl(0, 0%, 0%);
+   background: #701713;
 }
 
 input[type="checkbox"],
@@ -409,6 +414,7 @@ textarea {
    color: #666;
    border: 1px solid #ccc;
    border-radius: 3px;
+   width: 300px;
 }
 
 input[type="text"]:focus,
@@ -432,11 +438,28 @@ textarea {
    overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
    padding-left: 3px;
    vertical-align: top; /* Improves readability and alignment in all browsers */
-   width: 100%;
+   width: 300px;
 }
 
 form p span {
    width: 250px;
+}
+
+ul.terms {
+   margin: 0 0 0 1em;
+}
+
+.terms {
+   list-style: none;
+}
+
+.comments {
+   margin-bottom: 1em;
+}
+
+aside form {
+   margin: 0 auto;
+   width: 300px;
 }
 
 /*--------------------------------------------------------------
@@ -471,7 +494,7 @@ nav {
    clear: both;
    display: block;
    float: left;
-   font-family: 'Times New Roman', sans-serif;
+   font-family: Helvetica, Arial, sans-serif;
    margin: 0;
    position: relative;
    text-transform: uppercase;
@@ -500,7 +523,7 @@ nav {
    display: block;
    font-size: 16px;
    font-size: 1.6rem;
-   line-height: 2.2em;
+   line-height: 3em;
    padding: 0.75em 1em;
    text-decoration: none;
 }
@@ -758,6 +781,11 @@ nav {
 /*--------------------------------------------------------------
 8.0 Clearings
 --------------------------------------------------------------*/
+.group:after {
+   content: "";
+   display: table;
+   clear: both;
+}
 
 /*--------------------------------------------------------------
 9.0 Header
@@ -765,7 +793,7 @@ nav {
 header {
    float: left;
    background-color: #701713;
-   margin: 0 0 20px 0;
+   margin: 0 0 40px 0;
    width: 100%;
 }
 
@@ -776,18 +804,14 @@ header h1 {
 /*--------------------------------------------------------------
 10.0 Footer
 --------------------------------------------------------------*/
-.footer {
-
+.footer div {
+   margin: 0 auto;
+   text-align: center;
 }
 
-.footer a {
-
-}
-
-.copyright {
-}
-
-.built-by {
+.footer div a {
+   margin: 0 auto;
+   text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -849,7 +873,15 @@ ul.zebra-stripe li:nth-child(odd) {
    width: 100% !important;
    height: 100% !important;
 }
-
+.the-band {
+   margin-bottom: 50px;
+}
+.table {
+   margin-bottom: 40px;
+}
+.disc {
+   margin-bottom: 50px;
+}
 .imgrt {
    margin: 0 auto;
    display: block;
@@ -858,10 +890,18 @@ ul.zebra-stripe li:nth-child(odd) {
 
 p.image img {
    box-shadow: 2px 2px 5px #000;
+   margin-bottom: 70px;
+}
+
+
+.albums {
+   float: left;
+   max-width: 310px;
 }
 
 .album {
    box-shadow: 2px 2px 5px #000;
+   margin: 0 20px
 }
 .bio {
    float: left;
@@ -880,7 +920,6 @@ p.image img {
    box-shadow: 2px 2px 5px #000;
    margin: 0 20px 0 0;
 }
-
 .a {
    text-shadow: 2px 2px 5px #000;
 }

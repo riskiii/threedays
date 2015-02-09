@@ -18,29 +18,67 @@
 				$('#fig3p').hide();
 				$('#fig4p').hide();
 				$('#fig5p').hide();
+
+				$('#album1p').hide();
+				$('#album2p').hide();
+				$('#album3p').hide();
+				$('#album4p').hide();
 			});
 
 			$("#fig1").click(function() {
-				$("#fig1p").toggle(750);
+				getData( "#fig1p", "data/fig1p.html" );
+				$("#fig1p").toggle(500);
 			});
 
 			$("#fig2").click(function() {
-				$("#fig2p").toggle(750);
+				getData( "#fig2p", "data/fig2p.html" );
+				$("#fig2p").toggle(500);
 			});
 
 			$("#fig3").click(function() {
-				$("#fig3p").toggle(750);
+				getData( "#fig3p", "data/fig3p.html" );
+				$("#fig3p").toggle(500);
 			});
 
 			$("#fig4").click(function() {
-				$("#fig4p").toggle(750);
+				getData( "#fig4p", "data/fig4p.html" );
+				$("#fig4p").toggle(500);
 			});
 
 			$("#fig5").click(function() {
-				$("#fig5p").toggle(750);
+				getData( "#fig5p", "data/fig5p.html" );
+				$("#fig5p").toggle(500);
+			});
+
+			$("#album1").click(function() {
+				getData( "#album1p", "data/album1.html" );
+				$("#album1p").toggle(500);
+			});
+
+			$("#album2").click(function() {
+				getData( "#album2p", "data/album2.html" );
+				$("#album2p").toggle(500);
+			});
+
+			$("#album3").click(function() {
+				getData( "#album3p", "data/album3.html" );
+				$("#album3p").toggle(500);
+			});
+
+			$("#album4").click(function() {
+				getData( "#album4p", "data/album4.html" );
+				$("#album4p").toggle(500);
 			});
 		});
+
+		function getData( dataID, dataFile ) {
+			// the load() shorthand method performs the common task of
+			// retrieving HTML content and inserts the returned
+			// content into the specified element.
+			$( dataID ).load( dataFile );
+		}
 	</script>
+
 </head>
 
 <!--BODY-->
@@ -62,13 +100,13 @@
 
 <!--ARTICLE-->
 <article>
-	<section>
+	<section class="the-band group">
 		<h2> The Band</h2>
 		<p> The group was originally Groundswell with five members in 1992. Three Days Grace was formed five years later as a trio in 1997 with their first album titled <em>"Three Days Grace"</em> in 2003. With their first album they ranked #9 on the Billboard's Top Canadian Albums. In the following year they were nominated for the Best New Artist for Billboard and Juno. In 2006 They climbed to #5 in The Billboard 200 and #2 in the Top Canadian Albums with <em>"ONE-X"</em>. It was in the following year that they made #1 in the Billboard's Rock Artist of the year.
 		</p>
 	</section>
 
-	<section class="table">
+	<section class="table group">
 		<h2><a id="members" href="#top">The Members</a></h2>
 
 		<div class="bio">
@@ -76,18 +114,14 @@
 				<img src="images/matt.jpg" alt="Matt Walst" class="photo">
 				<figcaption>Matt Walst</figcaption>
 			</figure>
-			<p id="fig1p">
-				Matt Walst, the younger brother to the band's bass guitarist, Brad Walst, joined the band as the lead vocalist when Adam Gontier left for health related reasons. Matt was born December 18, 1982 making his age 31 and the youngest member. He got his first start when he founded the band <em>"My Darkest Days"</em> as the lead vocalist.
-			</p>
+			<p id="fig1p"></p>
 		</div>
 		<div class="bio">
 			<figure id="fig2">
 				<img src="images/brad.jpg" alt="Brad Walst" class="photo">
 				<figcaption>Brad Walst</figcaption>
 			</figure>
-			<p id="fig2p">
-				Brad Walst the older brother to Matt Walst is the bass guitarist and was with the band when it was first created back in 1997. Brad was born on February 16, 1977 putting his age at 37. Brad is married to Rhonda Walst and has two children, James and Grayden Walst.
-			</p>
+			<p id="fig2p"></p>
 		</div>
 
 		<div class="bio">
@@ -95,118 +129,186 @@
 				<img src="images/barry.jpg" alt="Barry Stock" class="photo">
 				<figcaption>Barry Stock</figcaption>
 			</figure>
-			<p id="fig3p">
-				Barry Stock joined the band in 2003 five years after Three Days Grace was orginally formed by Brad Walst, Neil Sanderson, and Adam Gontier. Barry was born on April 24, 1974 making him the odest member of the band at 40 years old. He is the band's lead guitarist and is married to Heather Stock.
-			</p>
+			<p id="fig3p"></p>
 		</div>
 		<div class="bio">
 			<figure id="fig4">
 				<img src="images/neil.jpg" alt="Neil Sanderson" class="photo">
 				<figcaption>Neil Sanderson</figcaption>
 			</figure>
-			<p id="fig4p">
-				Neil Sandersonis the band's drummer and backing vocalist. Neil's first band he played for was the Christian rock band <em>"Thousand Foot Krutch"</em> from 1995-1997 when he then co-founded Three Days Grace. Born on December 17, 1978 he is now 35 years old and is married to Janin Sanderson.
-			</p>
+			<p id="fig4p"></p>
 		</div>
 		<div class="bio">
 			<figure id="fig5">
 				<img src="images/adam.jpg" alt="Adam Gontier" class="photo">
 				<figcaption>Adam Gontier</figcaption>
 			</figure>
-			<p id="fig5p">
-				Adam Gontier was the co-founder and lead vocalist for Three Days Grace until 2013 when he left the band for health issues and was replaced by Matt Walst. Adam was born on May 25, 1978 and is married to Naomi Faith Brewer. Adam also play in a film called <em>"Raise Your Voice"</em> along with band members Brad, Barry, and Neil.
-			</p>
+			<p id="fig5p"></p>
 		</div>
 	</section>
 	
-		<h2><a id="album" href="#top">Albums</a></h2>
-			<a href="album1.html"><img src="images/albumart4.jpg" alt="Three Days Grace" class="album imgrt"></a>
-			<h2>Three Days Grace</h2>
-
-			<a href="album2.html"><img src="images/albumart3.jpg" alt="ONE-X" class="album imgrt"></a>
-			<h2>ONE-X</h2>
-
-			<a href="album3.html"><img src="images/albumart2.jpg" alt="Life Starts Now" class="album imgrt"></a>
-			<h2>Life Starts Now</h2>
-
-			<a href="album4.html"><img src="images/albumart1.png" alt="Transit of Venus" class="album imgrt"></a>
-			<h2>Transit of Venus</h2>	
-
+	<h2><a id="album" href="#top">Albums</a></h2>
+	<div class="disc group">
+		<div class="albums">
+			<figure id="album1">
+				<img src="images/albumart4.jpg" alt="Three Days Grace" class="album">
+				<h3><figcaption>Three Days Grace</figcaption></h3>
+			</figure>
+			<div id="album1p"></div>
+		</div>
+		<div class="albums">
+			<figure id="album2">
+				<img src="images/albumart3.jpg" alt="ONE-X" class="album">
+				<h3><figcaption>ONE-X</figcaption></h3>
+			</figure>
+			<div id="album2p"></div>
+		</div>
+		<div class="albums">
+			<figure id="album3">
+				<img src="images/albumart2.jpg" alt="Life Starts Now" class="album">
+				<h3><figcaption>Life Starts Now</figcaption></h3>
+			</figure>
+			<div id="album3p"></div>
+		</div>
+		<div class="albums">
+			<figure id="album4">
+				<img src="images/albumart1.png" alt="Transit of Venus" class="album">
+				<h3><figcaption>Transit of Venus</figcaption></h3>
+			</figure>
+			<div id="album4p"></div>
+		</div>
+	</div>
 </article>
 <!--END ARTICLE-->
 
 <!--ASIDE-->
 <aside>
-	<form><a href="#top" id="yellow">
-		<h3>Subscribe</h3></a>
-		<p><span>First Name: </span><input type="text" placeholder="First"/></p>
-		<p><span>Last Name: </span><input type="text" placeholder="Last"/></p>
-		<p><span>Address: </span><input type="text"/></p>
-		<p><span>City: </span><input type="text"/></p>
-		<select>
-			<option value="" disabled selected>--State--</option>
-			<option value="Alabama">AL</option>
-			<option value="Alaska">AK</option>
-			<option value="Arizona">AZ</option>
-			<option value="Arkansas">AR</option>
-			<option value="California">CA</option>
-			<option value="Colorado">CO</option>
-			<option value="Conneticut">CT</option>
-			<option value="Delaware">DE</option>
-			<option value="Florida">FL</option>
-			<option value="Gerogia">GA</option>
-			<option value="Hawaii">HI</option>
-			<option value="Idaho">ID</option>
-			<option value="Illinois">IL</option>
-			<option value="Indiana">IN</option>
-			<option value="Iowa">IA</option>
-			<option value="Kansas">KS</option>
-			<option value="Kentucky">KY</option>
-			<option value="Louisiana">LA</option>
-			<option value="Maine">ME</option>
-			<option value="Maryland">MD</option>
-			<option value="Massachusetts">MA</option>
-			<option value="Michigan">MI</option>
-			<option value="Minnesota">MN</option>
-			<option value="Mississippi">MS</option>
-			<option value="Missouri">MO</option>
-			<option value="Montana">MT</option>
-			<option value="Nebraska">NE</option>
-			<option value="Nevada">NV</option>
-			<option value="New Hampshire">NH</option>
-			<option value="New Jersey">NJ</option>
-			<option value="New Mexico">NM</option>
-			<option value="New York">NY</option>
-			<option value="North Carolina">NC</option>
-			<option value="North Dakota">ND</option>
-			<option value="Ohio">OH</option>
-			<option value="Oklahoma">OK</option>
-			<option value="Oregon">OR</option>
-			<option value="Pennsylvania">PA</option>
-			<option value="Rhode Island">RI</option>
-			<option value="South Carolina">SC</option>
-			<option value="South Dakota">SD</option>
-			<option value="Tennessee">TN</option>
-			<option value="Texaas">TX</option>
-			<option value="Utah">UT</option>
-			<option value="Vermont">VT</option>
-			<option value="Virginia">VA</option>
-			<option value="Washington">WA</option>
-			<option value="West Virginia">WV</option>
-			<option value="Wisconsin">WI</option>
-			<option value="Wyoming">WY</option>
-		</select>
-		<p><span>Date of Birth: </span><input type="date"/><p>
-		<p><span>Email: </span><input type="email"/><p>
-		<p>Do you agree to terms an conditions?
-		Yes <input type="checkbox" value="Yes"/> No <input type="checkbox" value="No"/></p>
-		<p>Comments <textarea></textarea></p>
+	<a href="#top" id="yellow">
+		<h2>Subscribe</h2></a>
+	<form>
+		<div>
+			<label for="fname">First Name: </label>
+			<div>
+				<input id="fname" type="text" placeholder="First"/>
+			</div>
+		</div>
+
+		<div>
+			<label for="lname">Last Name: </label>
+			<div>
+				<input type="text" id="lname" placeholder="Last"/>
+			</div>
+		</div>
+
+		<div>
+			<label for="address">Address: </label>
+			<div>
+				<input type="text" id="address"/>
+			</div>
+		</div>
+
+		<div>
+			<label for="city">City: </label>
+			<div>
+				<input type="text" id="city"/>
+			</div>
+		</div>
+
+		<div>
+			<label for="state">State:</label>
+			<div>
+				<select id="state">
+					<option value="" disabled selected>--State--</option>
+					<option value="Alabama">AL</option>
+					<option value="Alaska">AK</option>
+					<option value="Arizona">AZ</option>
+					<option value="Arkansas">AR</option>
+					<option value="California">CA</option>
+					<option value="Colorado">CO</option>
+					<option value="Conneticut">CT</option>
+					<option value="Delaware">DE</option>
+					<option value="Florida">FL</option>
+					<option value="Gerogia">GA</option>
+					<option value="Hawaii">HI</option>
+					<option value="Idaho">ID</option>
+					<option value="Illinois">IL</option>
+					<option value="Indiana">IN</option>
+					<option value="Iowa">IA</option>
+					<option value="Kansas">KS</option>
+					<option value="Kentucky">KY</option>
+					<option value="Louisiana">LA</option>
+					<option value="Maine">ME</option>
+					<option value="Maryland">MD</option>
+					<option value="Massachusetts">MA</option>
+					<option value="Michigan">MI</option>
+					<option value="Minnesota">MN</option>
+					<option value="Mississippi">MS</option>
+					<option value="Missouri">MO</option>
+					<option value="Montana">MT</option>
+					<option value="Nebraska">NE</option>
+					<option value="Nevada">NV</option>
+					<option value="New Hampshire">NH</option>
+					<option value="New Jersey">NJ</option>
+					<option value="New Mexico">NM</option>
+					<option value="New York">NY</option>
+					<option value="North Carolina">NC</option>
+					<option value="North Dakota">ND</option>
+					<option value="Ohio">OH</option>
+					<option value="Oklahoma">OK</option>
+					<option value="Oregon">OR</option>
+					<option value="Pennsylvania">PA</option>
+					<option value="Rhode Island">RI</option>
+					<option value="South Carolina">SC</option>
+					<option value="South Dakota">SD</option>
+					<option value="Tennessee">TN</option>
+					<option value="Texaas">TX</option>
+					<option value="Utah">UT</option>
+					<option value="Vermont">VT</option>
+					<option value="Virginia">VA</option>
+					<option value="Washington">WA</option>
+					<option value="West Virginia">WV</option>
+					<option value="Wisconsin">WI</option>
+					<option value="Wyoming">WY</option>
+				</select>
+			</div>
+		</div>
+
+		<div>
+			<label>Date of Birth: </label>
+			<div>
+				<input type="date"/>
+			</div>
+		<div>
+
+		<div>
+			<label>Email: </label>
+			<div>
+				<input type="email"/>
+			</div>
+		</div>
+
+		<div>Do you agree to terms an conditions?
+			<ul class="terms">
+				<li><input type="checkbox" value="Yes"/> Yes </li>
+				<li><input type="checkbox" value="No"/> No  </li>
+			</ul>
+		</div>
+		<div class="comments">
+			<label>Comments </label>
+			<div>
+				<textarea></textarea>
+			</div>
+		</div>
 		<p><input type="submit" value="SUBMIT"/></p>
 	</form>
+
 </aside>
-<!--END ASIDE-->
+
+	<p id="content"></p>
+
+	<!--END ASIDE-->
 <footer class="cf">
-	<a href="http://twitter.com/chrisclear22"><img src="images/tweet.png" alt="twitter" class="tweet"></a>&copy; <a href="source.html">Christopher Clear 2014 For Educational Purposes</a><br>
+	<div><a href="http://twitter.com/chrisclear22"><img src="images/tweet.png" alt="twitter" class="tweet"></a>&copy; <a href="source.html">Christopher Clear 2014 For Educational Purposes</a></div>
 </footer>
 </div>
 </body>
