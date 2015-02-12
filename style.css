@@ -144,9 +144,14 @@ select,
 textarea {
    color: #fff;
    font-family: 'Times New Roman', serif;
+   font-size: 100%;
    font-size: 18px;
-   font-size: 1.8rem;
+   font-size: 2.2rem;
    line-height: 1.8;
+}
+input[type="date"],
+select {
+   color: #666;
 }
 
 h1,
@@ -414,7 +419,6 @@ textarea {
    color: #666;
    border: 1px solid #ccc;
    border-radius: 3px;
-   width: 300px;
 }
 
 input[type="text"]:focus,
@@ -438,7 +442,6 @@ textarea {
    overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
    padding-left: 3px;
    vertical-align: top; /* Improves readability and alignment in all browsers */
-   width: 300px;
 }
 
 form p span {
@@ -458,8 +461,7 @@ ul.terms {
 }
 
 aside form {
-   margin: 0 auto;
-   width: 300px;
+
 }
 
 /*--------------------------------------------------------------
@@ -819,7 +821,7 @@ header h1 {
 --------------------------------------------------------------*/
 
 #wrapper {
-   max-width: 1280px;
+   max-width: 1240px;
    margin: 0 auto;
 }
 
@@ -911,7 +913,7 @@ p.image img {
    margin: 0 20px;
 }
 .bio img {
-   margin: 0 40px;
+   margin: 0 35px;
 }
 .bio figcaption {
    text-align: center;
@@ -923,7 +925,28 @@ p.image img {
 .a {
    text-shadow: 2px 2px 5px #000;
 }
-
+.social {
+   width: 320px;
+   margin: 0 auto;
+}
+.scrollToTop{
+   width: 110px;
+   height: 130px;
+   padding: 10px;
+   text-align: center;
+   background: whiteSmoke;
+   font-weight: bold;
+   color: #444;
+   text-decoration: none;
+   position: fixed;
+   top: 75px;
+   right: 40px;
+   display: none;
+   background: url('images/Arrow-Up.png') no-repeat 0px 20px;
+}
+.scrollToTop:hover{
+   text-decoration: none;
+}
 
 /*--------------------------------------------------------------
 13.0 Fonts
@@ -944,8 +967,40 @@ p.image img {
 /*--------------------------------------------------------------
 13.0 Responsive
 --------------------------------------------------------------*/
-@media only screen and (max-width: 1280px) {
 
+@media only screen and (min-width: 1281px) {
+   p {
+      margin: 0 1.5em 1.5em;
+   }
+   aside form {
+      margin: 0 auto;
+      width: 600px;
+   }
+   input[type="text"],
+   input[type="email"],
+   textarea {
+      width: 600px;
+   }
+
+   textarea {
+      height: 300px;
+   }
+}
+@media only screen and (max-width: 1280px) {
+   p {
+      margin: 0 1.5em 1.5em;
+   }
+   aside form {
+      margin: 0 auto;
+      width: 600px;
+   }
+   input[type="text"],
+   textarea {
+      width: 600px;
+   }
+   textarea {
+      height: 300px;
+   }
 }
 
 @media only screen and (max-width: 1140px) {
@@ -972,7 +1027,15 @@ p.image img {
 }
 
 @media only screen and ( max-width: 480px ) {
-
+   aside form {
+      margin: 0 auto;
+      width: 300px;
+   }
+   input[type="text"],
+   textarea {
+      width: 300px;
+      height: 200px;
+   }
 }
 
 @media only screen and ( max-width: 470px ) {

@@ -78,6 +78,25 @@
 			$( dataID ).load( dataFile );
 		}
 	</script>
+	<script>
+		$(document).ready(function(){
+
+			//Check to see if the window is top if not then display button
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > 100) {
+					$('.scrollToTop').fadeIn();
+				} else {
+					$('.scrollToTop').fadeOut();
+				}
+			});
+
+			//Click event to scroll to top
+			$('.scrollToTop').click(function(){
+				$('html, body').animate({scrollTop : 0},800);
+				return false;
+			});
+		});
+	</script>
 
 </head>
 
@@ -97,7 +116,7 @@
 		<img src="images/members.jpg" alt="Band Members" class="imgrt">
 	</p>
 
-
+	<a href="#" class="scrollToTop"></a>
 <!--ARTICLE-->
 <article>
 	<section class="the-band group">
@@ -299,7 +318,7 @@
 				<textarea></textarea>
 			</div>
 		</div>
-		<p><input type="submit" value="SUBMIT"/></p>
+		<div><input type="submit" value="SUBMIT"/></div>
 	</form>
 
 </aside>
@@ -308,7 +327,7 @@
 
 	<!--END ASIDE-->
 <footer class="cf">
-	<div><a href="http://twitter.com/chrisclear22"><img src="images/tweet.png" alt="twitter" class="tweet"></a>&copy; <a href="source.html">Christopher Clear 2014 For Educational Purposes</a></div>
+	<div class="social"><a href="http://twitter.com/chrisclear22"><img src="images/tweet.png" alt="twitter" class="tweet"></a>&copy; <a href="source.html">Christopher Clear 2014 For Educational Purposes</a></div>
 </footer>
 </div>
 </body>
