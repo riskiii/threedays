@@ -70,7 +70,7 @@ html {
 body {
    color: #404040;
    color: hsl(0, 0%, 25%);
-   background-image: url( images/seamless-natural-grunge-textures-2.jpg );
+   background: #160C00;
    font-size: 16px;
    font-size: 1.6rem;
    font-family: 'Times New Roman', serif;
@@ -142,12 +142,12 @@ button,
 input,
 select,
 textarea {
-   color: #fff;
+   color: #e5e1d9;
    font-family: 'Times New Roman', serif;
    font-size: 100%;
    font-size: 18px;
    font-size: 2.2rem;
-   line-height: 1.8;
+   line-height: 1.45;
 }
 input[type="date"],
 select {
@@ -173,6 +173,9 @@ h1 {
    font-size: 4.0rem;
 }
 
+h1.form {
+   line-height: 2.2;
+}
 h2 {
    font-size: 32px;
    font-size: 3.2rem;
@@ -520,11 +523,10 @@ nav {
 }
 
 .main-navigation a {
-   color: #fff;
-   color: hsl(0, 0%, 100%);
+   color: #e5e1d9;
    display: block;
-   font-size: 16px;
-   font-size: 1.6rem;
+   font-size: 18px;
+   font-size: 1.8rem;
    line-height: 3em;
    padding: 0.75em 1em;
    text-decoration: none;
@@ -801,6 +803,8 @@ header {
 
 header h1 {
    float: left;
+   line-height: 2.0em;
+   padding-left: .5em;
 }
 
 /*--------------------------------------------------------------
@@ -823,6 +827,10 @@ header h1 {
 #wrapper {
    max-width: 1240px;
    margin: 0 auto;
+   background-image: url( images/seamless-natural-grunge-textures-2.jpg );
+   -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+   -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
+   box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.75);
 }
 
 
@@ -1023,9 +1031,7 @@ p.image img {
    textarea {
       height: 300px;
    }
-   .form {
-      margin-left: 50px;
-   }
+
    .bio img {
       margin: 0 65px;
    }
