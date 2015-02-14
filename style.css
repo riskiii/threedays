@@ -70,7 +70,8 @@ html {
 body {
    color: #404040;
    color: hsl(0, 0%, 25%);
-   background: #160C00;
+   /*background: #160C00;*/
+   background-color: #352516;
    font-size: 16px;
    font-size: 1.6rem;
    font-family: 'Times New Roman', serif;
@@ -164,8 +165,6 @@ h6 {
    color: #e5e1d9;
    font-family: 'after_shokregular', sans-serif;
    text-shadow: 2px 2px 5px #000;
-   /*-ms-word-break: break-word;*/
-   /*word-break: break-word;*/
 }
 
 h1 {
@@ -173,9 +172,6 @@ h1 {
    font-size: 4.0rem;
 }
 
-h1.form {
-   line-height: 2.2;
-}
 h2 {
    font-size: 32px;
    font-size: 3.2rem;
@@ -463,10 +459,6 @@ ul.terms {
    margin-bottom: 1em;
 }
 
-aside form {
-
-}
-
 /*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
@@ -527,8 +519,8 @@ nav {
    display: block;
    font-size: 18px;
    font-size: 1.8rem;
-   line-height: 3em;
-   padding: 0.75em 1em;
+   line-height: 4.5em;
+   padding: 0 1em;
    text-decoration: none;
 }
 
@@ -552,17 +544,10 @@ nav {
    width: 200px;
 }
 
-.main-navigation ul ul li {
-
-}
-
 .main-navigation li:hover > a {
    color: #fff;
    color: hsl(0, 0%, 100%);
    background: #b50801;
-}
-
-.main-navigation ul ul :hover > a {
 }
 
 .main-navigation ul ul a:hover {
@@ -702,8 +687,6 @@ nav {
 .menu-social li a[href*="linkedin.com"]::before {
    content: '\f0e1';
 }
-
-
 
 /*--------------------------------------------------------------
 6.0 Accessibility
@@ -869,20 +852,6 @@ ul.zebra-stripe li:nth-child(odd) {
    background: #e1e9de;
 }
 
-.google-maps {
-   position: relative;
-   padding-bottom: 75%;
-   /*// This is the aspect ratio height : 0;*/
-   overflow: hidden;
-}
-
-.google-maps iframe {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100% !important;
-   height: 100% !important;
-}
 .the-band {
    margin-bottom: 50px;
 }
@@ -902,7 +871,6 @@ p.image img {
    box-shadow: 2px 2px 5px #000;
    margin-bottom: 70px;
 }
-
 
 .albums {
    cursor:pointer;
@@ -1037,25 +1005,6 @@ p.image img {
    }
 }
 
-@media only screen and (max-width: 1140px) {
-
-}
-
-@media only screen and (max-width: 1024px) {
-
-}
-
-@media screen and ( max-width: 1023px ) {
-
-}
-
-@media only screen and ( max-width: 768px ) {
-
-}
-
-@media screen and (max-width: 600px) {
-
-}
 @media screen and ( max-width: 585px ) {
    aside form {
       margin: 0 auto;
@@ -1069,20 +1018,6 @@ p.image img {
    textarea {
       height: 200px;
    }
-   h1.form {
-      /*margin-left: 50px;*/
-   }
 }
 
-@media only screen and ( max-width: 480px ) {
-
-}
-
-@media only screen and ( max-width: 470px ) {
-
-}
-
-@media only screen and ( max-width: 340px ) {
-
-}
 
