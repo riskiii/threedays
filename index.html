@@ -8,189 +8,6 @@
 	<meta name="author" content="Christopher Clear">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="application/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-   <script src='js/smooth-scroll.js'></script>
-   <script src='js/jquery.scrollto.js'></script>
-
-
-   <script>
-		jQuery(function() {
-
-			$(function(){
-				$('#fig1p').hide();
-				$('#fig2p').hide();
-				$('#fig3p').hide();
-				$('#fig4p').hide();
-				$('#fig5p').hide();
-
-				$('#album1p').hide();
-				$('#album2p').hide();
-				$('#album3p').hide();
-				$('#album4p').hide();
-			});
-
-			$("#fig1").click(function() {
-				getData( "#fig1p", "data/fig1p.html" );
-				$("#fig1p").toggle(500);
-			});
-
-			$("#fig2").click(function() {
-				getData( "#fig2p", "data/fig2p.html" );
-				$("#fig2p").toggle(500);
-			});
-
-			$("#fig3").click(function() {
-				getData( "#fig3p", "data/fig3p.html" );
-				$("#fig3p").toggle(500);
-			});
-
-			$("#fig4").click(function() {
-				getData( "#fig4p", "data/fig4p.html" );
-				$("#fig4p").toggle(500);
-			});
-
-			$("#fig5").click(function() {
-				getData( "#fig5p", "data/fig5p.html" );
-				$("#fig5p").toggle(500);
-			});
-
-			$("#album1").click(function() {
-				getData( "#album1p", "data/album1.html" );
-				$("#album1p").toggle(500);
-			});
-
-			$("#album2").click(function() {
-				getData( "#album2p", "data/album2.html" );
-				$("#album2p").toggle(500);
-			});
-
-			$("#album3").click(function() {
-				getData( "#album3p", "data/album3.html" );
-				$("#album3p").toggle(500);
-			});
-
-			$("#album4").click(function() {
-				getData( "#album4p", "data/album4.html" );
-				$("#album4p").toggle(500);
-			});
-		});
-
-		function getData( dataID, dataFile ) {
-			// the load() shorthand method performs the common task of
-			// retrieving HTML content and inserts the returned
-			// content into the specified element.
-			$( dataID ).load( dataFile );
-		}
-	</script>
-   <!-- http://codyhouse.co/gem/back-to-top/ -->
-	<script>
-      jQuery(document).ready(function($){
-         // browser window scroll (in pixels) after which the "back to top" link is shown
-         var offset = 300,
-         //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
-             offset_opacity = 1200,
-         //duration of the top scrolling animation (in ms)
-             scroll_top_duration = 700,
-         //grab the "back to top" link
-             $back_to_top = $('.cd-top');
-
-         //hide or show the "back to top" link
-         $(window).scroll(function(){
-            ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-            if( $(this).scrollTop() > offset_opacity ) {
-               $back_to_top.addClass('cd-fade-out');
-            }
-         });
-
-         //smooth scroll to top
-         $back_to_top.on('click', function(event){
-            event.preventDefault();
-            $('body,html').animate({
-                     scrollTop: 0 ,
-                  }, scroll_top_duration
-            );
-         });
-
-      });
-	</script>
-   <!--https://github.com/cferdinandi/smooth-scroll-->
-   <script>
-      smoothScroll.init({
-         speed: 1000,
-         easing: 'easeInOutCubic',
-         offset: 0,
-         updateURL: true,
-         callbackBefore: function ( toggle, anchor ) {},
-         callbackAfter: function ( toggle, anchor ) {}
-      });
-   </script>
-   <!--http://callmenick.com/2013/04/22/single-page-site-with-smooth-scrolling-highlighted-link-and-fixed-navigation/-->
-   <script>
-      $(document).ready(function(){
-         /**
-          * This part does the "fixed navigation after scroll" functionality
-          * We use the jQuery function scroll() to recalculate our variables as the
-          * page is scrolled/
-          */
-         $(window).scroll(function(){
-            var window_top = $(window).scrollTop() + 12; // the "12" should equal the margin-top value for nav.stick
-            var div_top = $('#nav-anchor').offset().top;
-            if (window_top > div_top) {
-               $('nav').addClass('stick');
-            } else {
-               $('nav').removeClass('stick');
-            }
-         });
-
-         /**
-          * This part causes smooth scrolling using scrollto.js
-          * We target all a tags inside the nav, and apply the scrollto.js to it.
-          */
-         $("nav a").click(function(evn){
-            evn.preventDefault();
-            $('html,body').scrollTo(this.hash, this.hash);
-         });
-
-         /**
-          * This part handles the highlighting functionality.
-          * We use the scroll functionality again, some array creation and
-          * manipulation, class adding and class removing, and conditional testing
-          */
-         var aChildren = $("nav li").children(); // find the a children of the list items
-         var aArray = []; // create the empty aArray
-         for (var i=0; i < aChildren.length; i++) {
-            var aChild = aChildren[i];
-            var ahref = $(aChild).attr('href');
-            aArray.push(ahref);
-         } // this for loop fills the aArray with attribute href values
-
-         $(window).scroll(function(){
-            var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
-            var windowHeight = $(window).height(); // get the height of the window
-            var docHeight = $(document).height();
-
-            for (var i=0; i < aArray.length; i++) {
-               var theID = aArray[i];
-               var divPos = $(theID).offset().top; // get the offset of the div from the top of page
-               var divHeight = $(theID).height(); // get the height of the div in question
-               if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
-                  $("a[href='" + theID + "']").addClass("nav-active");
-               } else {
-                  $("a[href='" + theID + "']").removeClass("nav-active");
-               }
-            }
-
-            if(windowPos + windowHeight == docHeight) {
-               if (!$("nav li:last-child a").hasClass("nav-active")) {
-                  var navActiveCurrent = $(".nav-active").attr("href");
-                  $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
-                  $("nav li:last-child a").addClass("nav-active");
-               }
-            }
-         });
-      });
-
-   </script>
 </head>
 
 <!--BODY-->
@@ -422,6 +239,190 @@
 </footer>
 </div>
 <a href="#0" class="cd-top">Top</a>
+<script type="application/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src='js/smooth-scroll.js'></script>
+<script src='js/jquery.scrollto.js'></script>
+
+
+<script>
+	jQuery(function() {
+
+		$(function(){
+			$('#fig1p').hide();
+			$('#fig2p').hide();
+			$('#fig3p').hide();
+			$('#fig4p').hide();
+			$('#fig5p').hide();
+
+			$('#album1p').hide();
+			$('#album2p').hide();
+			$('#album3p').hide();
+			$('#album4p').hide();
+		});
+
+		$("#fig1").click(function() {
+			getData( "#fig1p", "data/fig1p.html" );
+			$("#fig1p").toggle(500);
+		});
+
+		$("#fig2").click(function() {
+			getData( "#fig2p", "data/fig2p.html" );
+			$("#fig2p").toggle(500);
+		});
+
+		$("#fig3").click(function() {
+			getData( "#fig3p", "data/fig3p.html" );
+			$("#fig3p").toggle(500);
+		});
+
+		$("#fig4").click(function() {
+			getData( "#fig4p", "data/fig4p.html" );
+			$("#fig4p").toggle(500);
+		});
+
+		$("#fig5").click(function() {
+			getData( "#fig5p", "data/fig5p.html" );
+			$("#fig5p").toggle(500);
+		});
+
+		$("#album1").click(function() {
+			getData( "#album1p", "data/album1.html" );
+			$("#album1p").toggle(500);
+		});
+
+		$("#album2").click(function() {
+			getData( "#album2p", "data/album2.html" );
+			$("#album2p").toggle(500);
+		});
+
+		$("#album3").click(function() {
+			getData( "#album3p", "data/album3.html" );
+			$("#album3p").toggle(500);
+		});
+
+		$("#album4").click(function() {
+			getData( "#album4p", "data/album4.html" );
+			$("#album4p").toggle(500);
+		});
+	});
+
+	function getData( dataID, dataFile ) {
+		// the load() shorthand method performs the common task of
+		// retrieving HTML content and inserts the returned
+		// content into the specified element.
+		$( dataID ).load( dataFile );
+	}
+</script>
+<!-- http://codyhouse.co/gem/back-to-top/ -->
+<script>
+	jQuery(document).ready(function($){
+		// browser window scroll (in pixels) after which the "back to top" link is shown
+		var offset = 300,
+		//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+				offset_opacity = 1200,
+		//duration of the top scrolling animation (in ms)
+				scroll_top_duration = 700,
+		//grab the "back to top" link
+				$back_to_top = $('.cd-top');
+
+		//hide or show the "back to top" link
+		$(window).scroll(function(){
+			( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+			if( $(this).scrollTop() > offset_opacity ) {
+				$back_to_top.addClass('cd-fade-out');
+			}
+		});
+
+		//smooth scroll to top
+		$back_to_top.on('click', function(event){
+			event.preventDefault();
+			$('body,html').animate({
+						scrollTop: 0 ,
+					}, scroll_top_duration
+			);
+		});
+
+	});
+</script>
+<!--https://github.com/cferdinandi/smooth-scroll-->
+<script>
+	smoothScroll.init({
+		speed: 1000,
+		easing: 'easeInOutCubic',
+		offset: 0,
+		updateURL: true,
+		callbackBefore: function ( toggle, anchor ) {},
+		callbackAfter: function ( toggle, anchor ) {}
+	});
+</script>
+<!--http://callmenick.com/2013/04/22/single-page-site-with-smooth-scrolling-highlighted-link-and-fixed-navigation/-->
+<script>
+	$(document).ready(function(){
+		/**
+		 * This part does the "fixed navigation after scroll" functionality
+		 * We use the jQuery function scroll() to recalculate our variables as the
+		 * page is scrolled/
+		 */
+		$(window).scroll(function(){
+			var window_top = $(window).scrollTop() + 12; // the "12" should equal the margin-top value for nav.stick
+			var div_top = $('#nav-anchor').offset().top;
+			if (window_top > div_top) {
+				$('nav').addClass('stick');
+			} else {
+				$('nav').removeClass('stick');
+			}
+		});
+
+		/**
+		 * This part causes smooth scrolling using scrollto.js
+		 * We target all a tags inside the nav, and apply the scrollto.js to it.
+		 */
+		$("nav a").click(function(evn){
+			evn.preventDefault();
+			$('html,body').scrollTo(this.hash, this.hash);
+		});
+
+		/**
+		 * This part handles the highlighting functionality.
+		 * We use the scroll functionality again, some array creation and
+		 * manipulation, class adding and class removing, and conditional testing
+		 */
+		var aChildren = $("nav li").children(); // find the a children of the list items
+		var aArray = []; // create the empty aArray
+		for (var i=0; i < aChildren.length; i++) {
+			var aChild = aChildren[i];
+			var ahref = $(aChild).attr('href');
+			aArray.push(ahref);
+		} // this for loop fills the aArray with attribute href values
+
+		$(window).scroll(function(){
+			var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+			var windowHeight = $(window).height(); // get the height of the window
+			var docHeight = $(document).height();
+
+			for (var i=0; i < aArray.length; i++) {
+				var theID = aArray[i];
+				var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+				var divHeight = $(theID).height(); // get the height of the div in question
+				if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+					$("a[href='" + theID + "']").addClass("nav-active");
+				} else {
+					$("a[href='" + theID + "']").removeClass("nav-active");
+				}
+			}
+
+			if(windowPos + windowHeight == docHeight) {
+				if (!$("nav li:last-child a").hasClass("nav-active")) {
+					var navActiveCurrent = $(".nav-active").attr("href");
+					$("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
+					$("nav li:last-child a").addClass("nav-active");
+				}
+			}
+		});
+	});
+
+</script>
+
 </body>
 <!--<END BODY-->
 
