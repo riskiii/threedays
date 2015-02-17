@@ -8,6 +8,7 @@
 	<meta name="author" content="Christopher Clear">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
+   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css">
 </head>
 
 <!--BODY-->
@@ -22,9 +23,10 @@
 		</ul>
 	</nav>
 </header>
-	<p class="image">
-		<img src="images/members.jpg" alt="Band Members" class="imgrt">
-	</p>
+
+<div class="image">
+   <img src="images/members.jpg" alt="Band Members" class="imgrt">
+</div>
 
 <!--ARTICLE-->
 <article>
@@ -115,35 +117,35 @@
 	<form>
 		<div>
 			<label for="fname">First Name: </label>
-			<div>
+			<div class="myinput">
 				<input id="fname" type="text" placeholder="First"/>
 			</div>
 		</div>
 
 		<div>
 			<label for="lname">Last Name: </label>
-			<div>
+			<div class="myinput">
 				<input type="text" id="lname" placeholder="Last"/>
 			</div>
 		</div>
 
 		<div>
 			<label for="address">Address: </label>
-			<div>
+			<div class="myinput">
 				<input type="text" id="address"/>
 			</div>
 		</div>
 
 		<div>
 			<label for="city">City: </label>
-			<div>
+			<div class="myinput">
 				<input type="text" id="city"/>
 			</div>
 		</div>
 
 		<div>
 			<label for="state">State:</label>
-			<div>
+			<div class="myinput">
 				<select id="state">
 					<option value="" disabled selected>--State--</option>
 					<option value="Alabama">AL</option>
@@ -202,27 +204,27 @@
 
 		<div>
 			<label>Date of Birth: </label>
-			<div>
+			<div class="myinput">
 				<input type="date"/>
 			</div>
 		</div>
 
 		<div>
 			<label>Email: </label>
-			<div>
+			<div class="myinput">
 				<input type="email"/>
 			</div>
 		</div>
 
-		<div>Do you agree to terms an conditions?
-			<ul class="terms">
+		<div class="group">Do you agree to the terms and conditions?
+			<ul class="terms group">
 				<li><input type="checkbox" value="Yes"/> Yes </li>
 				<li><input type="checkbox" value="No"/> No  </li>
 			</ul>
 		</div>
 		<div class="comments">
 			<label>Comments </label>
-			<div>
+			<div class="myinput">
 				<textarea></textarea>
 			</div>
 		</div>
@@ -235,14 +237,20 @@
 
 	<!--END ASIDE-->
 <footer class="cf">
-	<div class="social"><a href="http://twitter.com/chrisclear22"><img src="images/tweet.png" alt="twitter" class="tweet"></a>&copy; <a href="source.html">Christopher Clear 2014 For Educational Purposes</a></div>
+   <div class="menu-social group" >
+      <ul>
+         <li><a href="https://twitter.com/chrisclear22"><span class="screen-reader-text">Twitter</span></a>
+            &copy; Christopher Clear 2014 For Educational Purposes</li>
+      </ul>
+   </div>
+	<!--<div class="social"><a href="http://twitter.com/chrisclear22"><img src="images/tweet.png" alt="twitter" class="tweet"></a>-->
+      <!--&copy; <a href="source.html">Christopher Clear 2014 For Educational Purposes</a></div>-->
 </footer>
 </div>
 <a href="#0" class="cd-top">Top</a>
 <script type="application/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src='js/smooth-scroll.js'></script>
 <script src='js/jquery.scrollto.js'></script>
-
 
 <script>
 	jQuery(function() {
