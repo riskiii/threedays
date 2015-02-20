@@ -621,6 +621,11 @@ nav {
 
 /* Social Menu */
 
+.menu-social {
+   display: block;
+   margin: 0 auto;
+   width: 600px;
+}
 .menu-social ul {
    text-align: center;
    list-style: none;
@@ -865,6 +870,7 @@ ul.zebra-stripe li:nth-child(odd) {
    margin-bottom: 80px;
 }
 .imgrt {
+   clear: both;
    margin: 0 auto;
    display: block;
    max-width: 80%;
@@ -1033,6 +1039,9 @@ div .terms {
    textarea {
       height: 200px;
    }
+   .menu-social {
+      width: 300px;
+   }
 }
 
 @media screen and ( max-width: 340px ) {
@@ -1048,4 +1057,8 @@ div .terms {
       line-height: 1.7em;
       padding: .5em;
    }
+   .menu-social {
+      width: 300px;
+   }
+
 }
