@@ -959,6 +959,26 @@ div .terms {
    opacity: 1;
 }
 
+.sg-color--a {
+   background-color: #E5E1D9;
+}
+
+.sg-color--b {
+   background-color: #B50801;
+}
+
+.sg-color--c {
+   background-color: #701713;
+}
+
+.sg-color--d {
+   background-color: #352516;
+}
+
+.sg-color--e {
+   background-color: #000000;
+}
+
 /*--------------------------------------------------------------
 13.0 Fonts
 --------------------------------------------------------------*/
