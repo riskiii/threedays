@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-  <title>Style Guide Boilerplate</title>
+  <title>Three Days Grace</title>
   <meta name="viewport" content="width=device-width">
   <!-- Style Guide Boilerplate Styles -->
   <link rel="stylesheet" href="css/sg-style.css">
@@ -14,12 +14,11 @@
 <body>
 
 <div id="top" class="sg-header sg-container">
-  <h1 class="sg-logo">STYLE GUIDE <span>BOILERPLATE</span></h1>
+  <h1 class="sg-logo">Three Days Grace</h1>
   <form id="js-sg-nav" action=""  method="post" class="sg-nav">
     <select id="js-sg-section-switcher" class="sg-section-switcher" name="sg_section_switcher">
         <option value="">Jump To Section:</option>
         <optgroup label="Intro">
-          <option value="#sg-about">About</option>
           <option value="#sg-colors">Colors</option>
           <option value="#sg-fontStacks">Font-Stacks</option>
         </optgroup>
